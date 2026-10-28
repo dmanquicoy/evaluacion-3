@@ -1,0 +1,262 @@
+:root {
+  --color-fondo: #f5f7fa;
+  --color-superficie: #ffffff;
+  --color-texto: #1f2933;
+  --color-texto-suave: #52606d;
+  --color-principal: #2b5fd9;
+  --color-principal-oscuro: #1d47a8;
+  --color-borde: #d5dbe3;
+  --color-error: #b42318;
+  --color-exito: #166534;
+  --color-exito-fondo: #e6f4ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.header-interior {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.menu a {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  color: var(--color-texto-suave);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.menu a:hover {
+  color: var(--color-principal);
+}
+
+.menu a.active {
+  color: var(--color-principal);
+  font-weight: 600;
+  border-bottom-color: var(--color-principal);
+}
+
+.contenido {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+.seccion h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.seccion p {
+  max-width: 65ch;
+}
+
+.inicio {
+  padding: 2rem 0;
+}
+
+.rol {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-principal);
+}
+
+.boton,
+button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-principal);
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover,
+button:hover {
+  background-color: var(--color-principal-oscuro);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #f2b705;
+  outline-offset: 2px;
+}
+
+.pendiente {
+  color: var(--color-texto-suave);
+  font-style: italic;
+}
+
+.lista-habilidades {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.habilidad-titulo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.nivel {
+  color: var(--color-texto-suave);
+  font-weight: 400;
+}
+
+progress {
+  width: 100%;
+  height: 12px;
+  accent-color: var(--color-principal);
+}
+
+.rejilla-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta {
+  padding: 1.25rem;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+.tarjeta a {
+  color: var(--color-principal);
+  font-weight: 600;
+}
+
+.formulario {
+  max-width: 520px;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.campo .con-error {
+  border-color: var(--color-error);
+}
+
+.error {
+  margin: 0.3rem 0 0;
+  color: var(--color-error);
+  font-size: 0.9rem;
+}
+
+.confirmacion {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background-color: var(--color-exito-fondo);
+  color: var(--color-exito);
+}
+
+.footer {
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--color-texto-suave);
+  border-top: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .header-interior {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .seccion h1 {
+    font-size: 1.6rem;
+  }
+}
+.foto-perfil {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--color-principal);
+  margin-bottom: 1rem;
+}
