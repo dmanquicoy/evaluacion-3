@@ -11,12 +11,9 @@ El sitio tiene cinco páginas: Inicio, Sobre mí, Habilidades, Proyectos y Conta
 
 # Instalación
 
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/dmanquicoy/evaluacion-3.git
 cd evaluacion-3
 npm install
-
-
-Reemplaza URL_DEL_REPOSITORIO por la dirección de este repositorio en GitHub. Si tu carpeta se llama distinto, usa ese nombre en el comando cd.
 
 # Cómo ejecutarlo
 
